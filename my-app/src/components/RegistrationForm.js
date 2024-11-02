@@ -20,7 +20,7 @@ function RegistrationApp() {
 
     // Регистрация пользователя
     const registerUser = async () => {
-        const response = await fetch("http://localhost/test111/my-app/php/registration.php", {
+        const response = await fetch("http://localhost/reg-admin/my-app/php/registration.php", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(formData),
@@ -31,7 +31,7 @@ function RegistrationApp() {
 
     // Подтверждение или отклонение заявки
     const handleUserRequest = async (userId, action) => {
-        const response = await fetch("http://localhost/test111/my-app/php/admin.php", {
+        const response = await fetch("http://localhost/reg-admin/my-app/php/admin.php", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ user_id: userId, action: action }),

@@ -19,7 +19,7 @@ function PhotoUpload() {
         const formData = new FormData();
         formData.append("photo", file);
 
-        const response = await fetch("http://localhost/test111/my-app/php/uploadPhoto.php", {
+        const response = await fetch("http://localhost/reg-admin/my-app/php/uploadPhoto.php", {
             method: "POST",
             body: formData,
         });

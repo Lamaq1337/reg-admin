@@ -8,7 +8,7 @@ function AdminPanel() {
     // Функция для загрузки заявок
     const loadPendingUsers = async () => {
         try {
-            const response = await fetch("http://localhost/test111/my-app/php/getPendingUsers.php");
+            const response = await fetch("http://localhost/reg-admin/my-app/php/getPendingUsers.php");
             const data = await response.json();
             setPendingUsers(data.pendingUsers || []); // если `pendingUsers` не существует, присвоить пустой массив
         } catch (error) {
@@ -19,7 +19,7 @@ function AdminPanel() {
 
     const loadPendingPhotos = async () => {
         try {
-            const response = await fetch("http://localhost/test111/my-app/php/getPendingPhotos.php");
+            const response = await fetch("http://localhost/reg-admin/my-app/php/getPendingPhotos.php");
             if (!response.ok) {
                 throw new Error(`Ошибка: ${response.statusText}`);
             }
@@ -47,7 +47,7 @@ function AdminPanel() {
     // Подтверждение или отклонение пользователя
     const handleUserRequest = async (userId, action) => {
         try {
-            const response = await fetch("http://localhost/test111/my-app/php/admin.php", {
+            const response = await fetch("http://localhost/reg-admin/my-app/php/admin.php", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ user_id: userId, action: action }),
@@ -70,7 +70,7 @@ function AdminPanel() {
     // Подтверждение или отклонение фотографии
     const handlePhotoRequest = async (photoId, action) => {
         try {
-            const response = await fetch("http://localhost/test111/my-app/php/admin.php", {
+            const response = await fetch("http://localhost/reg-admin/my-app/php/admin.php", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ photo_id: photoId, action: action }),
@@ -124,7 +124,7 @@ function AdminPanel() {
                 <ul>
                     {pendingPhotos.map((photo) => (
                         <li key={photo.id} style={{ marginBottom: "15px", padding: "10px", border: "1px solid #ddd" }}>
-                            <img src={`http://localhost/test111/my-app/php/uploaded_photos/${photo.file_name}`} alt="Фото" style={{ width: '150px', height: 'auto' }} />
+                            <img src={`http://localhost/reg-admin/my-app/php/uploaded_photos/${photo.file_name}`} alt="Фото" style={{ width: '150px', height: 'auto' }} />
                             <button onClick={() => handlePhotoRequest(photo.id, "approve")} style={{ marginRight: "10px", padding: "8px" }}>
                                 Подтвердить
                             </button>
