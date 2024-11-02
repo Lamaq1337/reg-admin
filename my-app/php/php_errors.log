@@ -1,0 +1,5 @@
+[02-Nov-2024 20:57:58 Europe/Berlin] PHP Warning:  Undefined array key "user_id" in C:\xampp\htdocs\TEST111\my-app\php\admin.php on line 78
+[02-Nov-2024 20:57:58 Europe/Berlin] PHP Warning:  Undefined array key "photo_path" in C:\xampp\htdocs\TEST111\my-app\php\admin.php on line 79
+[02-Nov-2024 20:58:36 Europe/Berlin] Ошибка соединения с базой данных: SQLSTATE[HY000] [1049] Unknown database '1231223'
+[02-Nov-2024 20:58:45 Europe/Berlin] PHP Warning:  Undefined array key "user_id" in C:\xampp\htdocs\TEST111\my-app\php\admin.php on line 78
+[02-Nov-2024 20:58:45 Europe/Berlin] PHP Warning:  Undefined array key "photo_path" in C:\xampp\htdocs\TEST111\my-app\php\admin.php on line 79
